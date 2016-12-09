@@ -249,7 +249,7 @@ class Manager
         $response = $this->sendRequest('/payments/find', [
             'InvoiceId' => $invoiceId
         ]);
-
+        return $response;
         if (!$response['Success']) {
             throw new Exception\RequestException($response);
         }
